@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-09T08:22:20 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FeeReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="708db911-519c-4113-8f13-42e1332783b1">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Nirmani&apos;s Data Adapter "/>
+	<parameter name="deuration" class="java.lang.String"/>
+	<parameter name="cosFee" class="java.lang.String"/>
+	<parameter name="regFee" class="java.lang.String"/>
+	<parameter name="Total" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from regdetail;]]>
+	</queryString>
+	<field name="CourseCode" class="java.lang.String"/>
+	<field name="Deuration" class="java.lang.String"/>
+	<field name="CourseFee" class="java.math.BigDecimal"/>
+	<field name="RegFee" class="java.math.BigDecimal"/>
+	<field name="Total" class="java.math.BigDecimal"/>
+	<group name="CourseCode">
+		<groupExpression><![CDATA[$F{CourseCode}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="236" splitType="Stretch">
+			<staticText>
+				<reportElement x="-11" y="-10" width="191" height="40" uuid="a30f793c-b199-46bc-8b1c-843ca268dcd7"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BRIGHTWAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="30" width="330" height="30" uuid="7023cdfe-8d3d-4c41-bb47-d9de8df984b0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Preservarance is The Mother of Success!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="60" width="330" height="20" uuid="8eca29bc-a2eb-4a3a-adc9-a9bc49dcd252"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Baddegama Road, Uluvitike, Galle.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-11" y="80" width="331" height="20" uuid="539f6247-a75a-49e1-964a-7b8b0e610ba3"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tele : 0772134567 / 07156789345]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-10" y="100" width="330" height="20" uuid="63a86b48-624d-41dd-b9a3-651d9240cd15"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[www.brightway.lk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-9" y="145" width="229" height="35" uuid="658e24be-3d35-4451-a9ff-18b0426ad639"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OFFICIAL RECEIPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-9" y="187" width="129" height="23" uuid="d2a8df41-8337-46a8-b0ad-435454280348"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Receipt Date     :]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="130" y="187" width="180" height="23" uuid="525a3469-db8a-43c2-aaf3-b9b62eea456b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="110" splitType="Stretch">
+			<staticText>
+				<reportElement x="-9" y="0" width="129" height="20" uuid="81e2599e-4437-4118-9bc2-b14782eb0b4d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Deuration 	     :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="0" width="180" height="20" uuid="0f6de463-fbca-43cb-b3d1-87d6b3cc6914"/>
+				<textFieldExpression><![CDATA[$P{deuration}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="30" width="128" height="20" uuid="7897fac5-7a9c-401a-9f20-3c1a21d99240"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Course Fee 	     :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="30" width="180" height="20" uuid="6449c0dc-f1ee-422b-a891-0f5dc4175286"/>
+				<textFieldExpression><![CDATA[$P{cosFee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="60" width="128" height="20" uuid="3589409c-d3e3-4873-950d-2bd80c14a022"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Reg Fee            :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="60" width="180" height="20" uuid="0a27dd5f-ec39-4f60-a896-b7001bbae7a1"/>
+				<textFieldExpression><![CDATA[$P{regFee}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-8" y="90" width="128" height="20" uuid="cd73de85-a8c7-4821-96f3-82838c975706"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total                  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="90" width="180" height="20" uuid="59bc0afa-60eb-4266-b07d-5de15dee8213"/>
+				<textFieldExpression><![CDATA[$P{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="188" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="560" height="25" uuid="4d68ea88-67a1-4dbc-aa2d-77661c831efd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[* All payments should be paid on the respective date or prior to the date.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="560" height="20" uuid="29b62efb-b0c4-4355-acad-ebebe711cfdc"/>
+				<text><![CDATA[* Any payment cannot be transferred or refunded.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="79" width="100" height="21" uuid="2c7b16b9-b50f-4b4e-b474-9608e6ed3113"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Received by]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="79" width="195" height="21" uuid="9590ce88-e9a9-42e6-b257-d89eedb481a2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Student Signature]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="130" width="201" height="17" uuid="c535f25d-73ad-4a68-ab23-58021fe28885"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Branch  :  Galle : Baddegama Road ,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="167" width="150" height="20" uuid="2070ded2-e261-4bd9-9861-5cd211da1427"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Tel : 07156789345]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="53" y="147" width="150" height="20" uuid="a1484749-bdde-4814-a32c-fefc73bd453c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Uluvitike.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="253" y="147" width="96" height="20" uuid="c1994800-14a5-40a1-adca-05b9851e0e59"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Brightway]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="129" width="100" height="30" uuid="8f5a43a8-e6f1-45cc-9cd4-1e929fc189c3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PV 12345]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

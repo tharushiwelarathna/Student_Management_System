@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="887.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.StudentFormController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="183.0" prefHeight="648.0" prefWidth="364.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend>
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtFirstName" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="166.0" onAction="#txtFirstNameSearchOnAction" prefHeight="47.0" prefWidth="325.0" promptText="First Name" />
+            <JFXTextField fx:id="txtLastName" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="242.0" prefHeight="47.0" prefWidth="325.0" promptText="Last Name" />
+            <JFXTextField fx:id="txtContact" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="398.0" prefHeight="47.0" prefWidth="325.0" promptText="Contact" />
+            <JFXDatePicker fx:id="txtDOB" defaultColor="#2da0c6" layoutX="20.0" layoutY="466.0" prefHeight="59.0" prefWidth="325.0" promptText="DOB" />
+            <JFXTextField fx:id="txtAddress" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="317.0" prefHeight="47.0" prefWidth="325.0" promptText="Address" />
+            <JFXComboBox fx:id="cmbGender" layoutX="20.0" layoutY="549.0" prefHeight="47.0" prefWidth="325.0" promptText="Gender" />
+            <JFXTextField fx:id="txtID" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="88.0" onAction="#txtSelectIDOnAction" prefHeight="47.0" prefWidth="325.0" promptText="ID" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="108.0" layoutY="154.0" opacity="0.52" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: #142850;" text="Personal Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="419.0" layoutY="183.0" prefHeight="648.0" prefWidth="364.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend>
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+         <children>
+            <JFXTextField fx:id="txtRegNo" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="175.0" prefHeight="47.0" prefWidth="325.0" promptText="Reg No" />
+            <JFXTextField fx:id="txtRegFee" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="258.0" prefHeight="47.0" prefWidth="325.0" promptText="Reg Fee" />
+            <Separator layoutX="15.0" layoutY="387.0" prefHeight="2.0" prefWidth="334.0" />
+            <JFXTextField fx:id="txtCourseCode" focusColor="#2da0c6" labelFloat="true" layoutX="20.0" layoutY="546.0" prefHeight="47.0" prefWidth="325.0" promptText="Course Code" />
+            <JFXTextField fx:id="txtSID" labelFloat="true" layoutX="20.0" layoutY="445.0" onAction="#txtSearchIDOnAction" prefHeight="47.0" prefWidth="325.0" promptText="ID" />
+            <JFXDatePicker fx:id="txtRegDate" defaultColor="#2da0c6" layoutX="20.0" layoutY="88.0" prefHeight="59.0" prefWidth="325.0" promptText="Reg Date" />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="496.0" layoutY="154.0" opacity="0.52" prefHeight="59.0" prefWidth="189.0" style="-fx-background-color: #142850;" text="Register Details" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="813.0" layoutY="569.0" prefHeight="262.0" prefWidth="364.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend>
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+         <children>
+            <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="117.0" layoutY="117.0" onAction="#btnClearOnAction" prefHeight="47.0" prefWidth="114.0" style="-fx-background-color: #ffc93c;" text="Clear">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnRegistor" buttonType="RAISED" layoutX="190.0" layoutY="43.0" onAction="#btnRegistorOnAction" prefHeight="47.0" prefWidth="114.0" style="-fx-background-color: #aeefec;" text="Registor">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btnManageStudent" buttonType="RAISED" layoutX="80.0" layoutY="188.0" onAction="#btnManageStudentOnAction" prefHeight="47.0" prefWidth="204.0" style="-fx-background-color: #b2ebf2;" text="Manage students">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnNew" buttonType="RAISED" layoutX="47.0" layoutY="43.0" onAction="#btnNewOnAction" prefHeight="47.0" prefWidth="114.0" style="-fx-background-color: #00bcd4;" text="+ New">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="808.0" layoutY="184.0" prefHeight="291.0" prefWidth="373.0" style="-fx-background-color: #ffffff;">
+         <effect>
+            <Blend>
+               <topInput>
+                  <DropShadow />
+               </topInput>
+            </Blend>
+         </effect>
+         <children>
+            <Label layoutY="-6.0" prefHeight="367.0" prefWidth="159.0" style="-fx-background-color: #000000;" />
+            <Label layoutX="27.0" layoutY="105.0" prefHeight="37.0" prefWidth="125.0" text="Amount to pay:" textFill="WHITE" />
+            <Label fx:id="lblAmount" layoutX="27.0" layoutY="152.0" prefHeight="37.0" prefWidth="125.0" text="Rs 1000" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="187.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/user-group-man-woman.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="80.0" prefWidth="1212.0" style="-fx-background-color: #00334e;">
+         <children>
+            <Label layoutX="855.0" layoutY="49.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="STUDENT MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="855.0" layoutY="25.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="/home/students" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

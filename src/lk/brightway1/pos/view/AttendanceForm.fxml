@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="887.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.AttendanceFormController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1212.0" style="-fx-background-color: #00334e;">
+         <children>
+            <Label layoutX="855.0" layoutY="49.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="STUDENT MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="855.0" layoutY="25.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="/home/Attendance" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXComboBox fx:id="cmbStudentId" labelFloat="true" layoutX="33.0" layoutY="174.0" onAction="#cmbStudentIdOnAction" prefHeight="46.0" prefWidth="315.0" promptText="Student ID" />
+      <JFXButton fx:id="btnCheckAttendance" buttonType="RAISED" layoutX="393.0" layoutY="174.0" onAction="#btnCheckAttendanceOnAction" prefHeight="46.0" prefWidth="220.0" style="-fx-background-color: #6866c5;" text="Check Attendance">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnStarting" buttonType="RAISED" layoutX="772.0" layoutY="174.0" onAction="#btnStartingOnAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-color: #00bcd4;" text="Starting">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnEnding" buttonType="RAISED" layoutX="920.0" layoutY="174.0" onAction="#btnEndingOnAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-color: #00bcd4;" text="Ending">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnAbsent" buttonType="RAISED" layoutX="1059.0" layoutY="174.0" onAction="#btnAbsentOnAction" prefHeight="46.0" prefWidth="129.0" style="-fx-background-color: #b2ebf2;" text="Absent">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblAttendance" layoutX="52.0" layoutY="350.0" prefHeight="404.0" prefWidth="1109.0">
+        <columns>
+          <TableColumn fx:id="colDate" prefWidth="218.0" text="Date" />
+          <TableColumn fx:id="colStarting" prefWidth="321.0" text="Starting" />
+            <TableColumn fx:id="colEnding" prefWidth="281.0" text="Ending" />
+            <TableColumn fx:id="colStudyHours" prefWidth="288.0" text="Study Hours" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblStudentName" alignment="CENTER" layoutX="265.0" layoutY="268.0" prefHeight="54.0" prefWidth="696.0" textFill="#c31616">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAbsentStudent" alignment="CENTER" layoutX="465.0" layoutY="777.0" prefHeight="54.0" prefWidth="696.0" textFill="#c31616">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

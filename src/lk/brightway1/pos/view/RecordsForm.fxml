@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="887.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.RecordsFormController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1212.0" style="-fx-background-color: #00334e;">
+         <children>
+            <Label layoutX="855.0" layoutY="49.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="STUDENT MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="855.0" layoutY="25.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="/home/records" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TabPane layoutX="10.0" layoutY="93.0" prefHeight="783.0" prefWidth="1191.0" style="-fx-background-color: #00bcd4;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Registration">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblRegistration" prefHeight="740.0" prefWidth="1184.0">
+                          <columns>
+                            <TableColumn fx:id="colRegNo" prefWidth="161.0" text="Reg No" />
+                            <TableColumn fx:id="colRegDate" prefWidth="270.0" text="Reg Date" />
+                              <TableColumn fx:id="colStudentId" prefWidth="243.0" text="Student ID" />
+                              <TableColumn fx:id="colCourseCode" prefWidth="255.0" text="Course Code" />
+                              <TableColumn fx:id="colRegFee" prefWidth="268.0" text="Reg Fee" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Students">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblStudent" prefHeight="673.0" prefWidth="1198.0" style="-fx-background-color: ;">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="103.0" text="ID" />
+                            <TableColumn fx:id="colFirstName" prefWidth="165.0" text="First Name" />
+                              <TableColumn fx:id="colLastName" prefWidth="169.0" text="Last Name" />
+                              <TableColumn fx:id="colAddress" prefWidth="262.0" text="Address" />
+                              <TableColumn fx:id="colSContact" prefWidth="189.0" text="Contact" />
+                              <TableColumn fx:id="colDob" prefWidth="152.0" text="Dob" />
+                              <TableColumn fx:id="colGender" prefWidth="141.0" text="Gender" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnPrint" buttonType="RAISED" layoutX="540.0" layoutY="685.0" onAction="#btnPrintOnAction" prefHeight="45.0" prefWidth="136.0" style="-fx-background-color: #000000;" text="Print" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Teachers">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblTeacher" prefHeight="734.0" prefWidth="1180.0">
+                          <columns>
+                            <TableColumn fx:id="colTID" prefWidth="104.0" text="ID" />
+                            <TableColumn fx:id="colFName" prefWidth="161.0" text="First Name" />
+                              <TableColumn fx:id="colLName" prefWidth="168.0" text="Last Name" />
+                              <TableColumn fx:id="colDOB" prefWidth="132.0" text="DOB" />
+                              <TableColumn fx:id="colJoinDate" prefWidth="157.0" text="Join Date" />
+                              <TableColumn fx:id="colgender" prefWidth="140.0" text="Gender" />
+                              <TableColumn fx:id="colcontact" prefWidth="186.0" text="Contact" />
+                              <TableColumn fx:id="colCode" prefWidth="131.0" text="Course Code" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Attendance">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView prefHeight="738.0" prefWidth="1184.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                              <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Untitled Tab 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Untitled Tab 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+            <Tab text="Untitled Tab 2">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

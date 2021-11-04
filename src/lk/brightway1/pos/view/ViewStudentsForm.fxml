@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="887.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.ViewStudentsFormController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="151.0" prefHeight="144.0" prefWidth="828.0" style="-fx-background-color: #00bcd4;">
+         <children>
+            <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="650.0" layoutY="72.0" prefHeight="46.0" prefWidth="148.0" style="-fx-background-color: #084177;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asserts/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="182.0" layoutY="14.0" prefHeight="36.0" prefWidth="174.0" text="Filter by:" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtID" layoutX="203.0" layoutY="69.0" onAction="#txtIDSearchOnAction" opacity="0.75" prefHeight="49.0" prefWidth="430.0" promptText="Search by name or id" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="57.0" layoutY="101.0" prefHeight="100.0" prefWidth="133.0" style="-fx-background-color: #084177;">
+         <children>
+            <ImageView fitHeight="71.0" fitWidth="113.0" layoutX="31.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/find-user-male.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblStudent" layoutX="24.0" layoutY="322.0" prefHeight="540.0" prefWidth="822.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="101.99996948242188" text="ID" />
+          <TableColumn fx:id="colFirstName" prefWidth="209.0" text="FIRST NAME" />
+            <TableColumn fx:id="colLastName" prefWidth="263.0" text="LAST NAME" />
+            <TableColumn fx:id="colCourseCode" prefWidth="249.0" text="COURSE ENROLLED" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="862.0" layoutY="151.0" prefHeight="710.0" prefWidth="331.0">
+         <children>
+            <Label layoutX="3.0" prefHeight="203.0" prefWidth="331.0" style="-fx-background-color: #202040;" />
+            <Label fx:id="lblFirstName" layoutX="64.0" layoutY="142.0" prefHeight="36.0" prefWidth="102.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="248.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/edit.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAddress" layoutX="23.0" layoutY="240.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #aeefec;" />
+            <Label fx:id="lblContact" layoutX="25.0" layoutY="291.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #b2ebf2;" />
+            <Label fx:id="lblDob" layoutX="25.0" layoutY="344.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #6886c5;" />
+            <Label fx:id="lblGender" layoutX="24.0" layoutY="396.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #c3edea;" />
+            <Label fx:id="lblRegNo" layoutX="25.0" layoutY="491.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #aeefec;" />
+            <Label fx:id="lblRegDate" layoutX="25.0" layoutY="546.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #6886c5;" />
+            <Label fx:id="lblCourseCode" layoutX="25.0" layoutY="599.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #c3edea;" />
+            <Label fx:id="lblLastName" layoutX="166.0" layoutY="142.0" prefHeight="36.0" prefWidth="160.0" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="23.0" layoutY="460.0" prefHeight="0.0" prefWidth="288.0" />
+            <Label fx:id="lblRegFee" layoutX="25.0" layoutY="653.0" prefHeight="36.0" prefWidth="288.0" style="-fx-background-color: #b2ebf2;" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="117.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/person-female.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane prefHeight="80.0" prefWidth="1212.0" style="-fx-background-color: #00334e;">
+         <children>
+            <Label layoutX="855.0" layoutY="49.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="STUDENT MANAGEMENT SYSTEM" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="855.0" layoutY="25.0" prefHeight="31.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="/home/viewstudents" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

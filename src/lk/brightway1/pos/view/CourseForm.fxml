@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="666.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.CourseFormController">
+   <onMouseClicked>#navigateToHome</onMouseClicked>
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1000.0" style="-fx-background-color: #00334e;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="62.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <onMouseClicked>#navigateToHome</onMouseClicked>
+               <image>
+                  <Image url="@../asserts/icons8-home-50.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="643.0" layoutY="14.0" prefHeight="52.0" prefWidth="357.0" style="-fx-background-color: #0f3460;" text="Manage Course" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtCourseCode" labelFloat="true" layoutX="33.0" layoutY="101.0" prefHeight="39.0" prefWidth="394.0" promptText="Course Code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseName" labelFloat="true" layoutX="33.0" layoutY="162.0" prefHeight="39.0" prefWidth="394.0" promptText="Course Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseType" labelFloat="true" layoutX="577.0" layoutY="101.0" prefHeight="39.0" prefWidth="381.0" promptText="Course Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDeuration" labelFloat="true" layoutX="577.0" layoutY="162.0" prefHeight="39.0" prefWidth="381.0" promptText="Deuration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseFee" labelFloat="true" layoutX="33.0" layoutY="219.0" prefHeight="39.0" prefWidth="394.0" promptText="Course Fee">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="321.0" layoutY="281.0" onAction="#btnSave_OnAction" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: #b2ebf2;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="500.0" layoutY="281.0" onAction="#btnDelete_OnAction" prefHeight="52.0" prefWidth="155.0" style="-fx-background-color: #00bcd4;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="tblCourses" layoutX="21.0" layoutY="358.0" prefHeight="283.0" prefWidth="951.0">
+        <columns>
+          <TableColumn fx:id="colCourseCode" prefWidth="133.0" text="Course Code" />
+          <TableColumn fx:id="colCourseName" prefWidth="328.0" text="Course Name" />
+            <TableColumn fx:id="colCourseType" prefWidth="153.0" text="Course Type" />
+            <TableColumn fx:id="colDeuration" prefWidth="161.0" text="Deuration" />
+            <TableColumn fx:id="colCourseFee" prefWidth="175.0" text="Course Fee" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

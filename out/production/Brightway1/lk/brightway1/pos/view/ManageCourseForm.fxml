@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="887.0" prefWidth="1212.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.brightway1.pos.controller.ManageCourseFormController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1212.0" style="-fx-background-color: #00334e;">
+         <children>
+            <Label alignment="CENTER" layoutX="833.0" layoutY="23.0" prefHeight="57.0" prefWidth="379.0" style="-fx-background-color: #0f3460;" text="Manage Course" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtCode" labelFloat="true" layoutX="74.0" layoutY="134.0" onAction="#txtSearchOnAction" prefHeight="57.0" prefWidth="379.0" promptText="Course Code">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseName" labelFloat="true" layoutX="733.0" layoutY="134.0" prefHeight="57.0" prefWidth="379.0" promptText="Course Name">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtType" labelFloat="true" layoutX="74.0" layoutY="219.0" prefHeight="57.0" prefWidth="379.0" promptText="Course Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDeuration" labelFloat="true" layoutX="733.0" layoutY="219.0" prefHeight="57.0" prefWidth="379.0" promptText="Deuration">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" labelFloat="true" layoutX="74.0" layoutY="320.0" prefHeight="57.0" prefWidth="379.0" promptText="Course Fee">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblCourse" layoutX="74.0" layoutY="444.0" prefHeight="362.0" prefWidth="1058.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="133.0" text="Code" />
+          <TableColumn fx:id="colName" prefWidth="278.0" text="Course Name" />
+            <TableColumn fx:id="colType" prefWidth="175.0" text="Type" />
+            <TableColumn fx:id="colDeuration" prefWidth="293.0" text="Deuration" />
+            <TableColumn fx:id="colCourseFee" prefWidth="178.0" text="Course Fee" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="788.0" layoutY="331.0" onAction="#btnAddOnAction" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #b2ebf2;" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="955.0" layoutY="331.0" onAction="#btnDeleteOnAction" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #b2ebf2;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnNew" buttonType="RAISED" layoutX="619.0" layoutY="331.0" onAction="#btnAddNewOnAction" prefHeight="46.0" prefWidth="135.0" style="-fx-background-color: #b2ebf2;" text="+ New">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

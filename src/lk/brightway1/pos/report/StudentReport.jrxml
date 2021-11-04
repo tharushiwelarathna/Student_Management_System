@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2020-10-07T01:46:48 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StudentReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a713ae37-7b45-4578-b17c-1670505d7709">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Nirmani&apos;s Data Adapter "/>
+	<subDataset name="Dataset1" uuid="7959764a-00ff-4a15-8ca5-91a6bdf30b45">
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Nirmani&apos;s Data Adapter "/>
+		<queryString language="SQL">
+			<![CDATA[Select * from student;]]>
+		</queryString>
+		<field name="StudentID" class="java.lang.String"/>
+		<field name="FirstName" class="java.lang.String"/>
+		<field name="LastName" class="java.lang.String"/>
+		<field name="Address" class="java.lang.String"/>
+		<field name="Contact" class="java.lang.Integer"/>
+		<field name="Dob" class="java.lang.String"/>
+		<field name="Gender" class="java.lang.String"/>
+		<group name="StudentID">
+			<groupExpression><![CDATA[$F{StudentID}]]></groupExpression>
+		</group>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from student;]]>
+	</queryString>
+	<field name="StudentID" class="java.lang.String"/>
+	<field name="FirstName" class="java.lang.String"/>
+	<field name="LastName" class="java.lang.String"/>
+	<field name="Address" class="java.lang.String"/>
+	<field name="Contact" class="java.lang.Integer"/>
+	<field name="Dob" class="java.lang.String"/>
+	<field name="Gender" class="java.lang.String"/>
+	<variable name="Contact1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{Contact}]]></variableExpression>
+	</variable>
+	<group name="StudentID">
+		<groupExpression><![CDATA[$F{StudentID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="-10" width="311" height="50" uuid="97b1a145-c014-416f-b7ea-818ddcad8446"/>
+				<textElement>
+					<font size="34" isBold="true"/>
+				</textElement>
+				<text><![CDATA[		BRIGHTWAY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="40" width="410" height="30" uuid="65bdeccf-8fbb-4fae-99f4-aa2ede4651b8"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Preservarance is The Mother of Success!]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="260" height="30" uuid="136338bb-7413-4949-82ba-5da59d2f947e"/>
+				<textElement>
+					<font size="19"/>
+				</textElement>
+				<text><![CDATA[Student Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="30" uuid="7ddcc61d-c296-4153-aeac-9c0dbff542c0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="10" width="80" height="30" uuid="1b9e75f7-acb8-43ad-b482-ba01814cae54"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="80" height="30" uuid="e32b2104-ff3c-4dc9-81b7-7dfad4bdcfb9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="10" width="70" height="30" uuid="165fd05d-ceb6-49de-8ec2-a2881314db7b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="10" width="61" height="30" uuid="e7c7b817-c86d-40c4-a055-ec3e293df259"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="10" width="60" height="30" uuid="0c97a00a-a5b4-4684-a2ae-9701595cfed9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="495" y="10" width="80" height="30" uuid="e5faf3d7-2dee-4860-9b67-1ddf93fadc89"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="10" width="60" height="22" uuid="e74db03e-131b-4b03-a526-ad9bd5c6e73a"/>
+				<textFieldExpression><![CDATA[$F{StudentID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="8" width="60" height="22" uuid="e0fe1e31-70ad-44b5-861b-896acc0cd777"/>
+				<textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="7" width="70" height="24" uuid="1948374d-759b-49f0-a7b4-00ada81242f9"/>
+				<textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="7" width="70" height="22" uuid="89d3af08-4983-4999-b569-8e206364b183"/>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="7" width="61" height="19" uuid="3c9ae403-1bc0-4a21-9761-cd86aef3ad47"/>
+				<textFieldExpression><![CDATA[$F{Contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="6" width="60" height="20" uuid="865e41e5-9bfc-4cea-aa66-08560efe11c0"/>
+				<textFieldExpression><![CDATA[$F{Dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="4" width="55" height="22" uuid="87334c98-da15-46e9-88f1-d9bfa1581f44"/>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="41" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="10" width="555" height="1" uuid="31c600da-218a-48b9-8f5f-5a55b4747577"/>
+			</break>
+			<staticText>
+				<reportElement x="160" y="10" width="220" height="20" uuid="e2244344-be0f-4e1d-9538-ef0fbea076ac"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Brightway Educational Institute]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
